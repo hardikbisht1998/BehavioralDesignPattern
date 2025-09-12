@@ -1,0 +1,47 @@
+import commandPattern.CommandTester;
+import iteratorPattern.IteratorTester;
+import observerPattern.DOfFishery;
+import observerPattern.DiscordObserver;
+import observerPattern.WatsappObserver;
+import strategy.BusCost;
+import strategy.PlaneCost;
+import strategy.TravelCalculator;
+import templatePattern.TemplateTester;
+
+import javax.swing.*;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        TravelCalculator travelCalculator=new TravelCalculator();
+        travelCalculator.setCostCalculator(new BusCost());
+        System.out.println("Expense of Bus paid by company:"+travelCalculator.travelExpense(240,720));
+        travelCalculator.setCostCalculator(new PlaneCost());
+        System.out.println("Expense of Plane paid by company:"+travelCalculator.travelExpense(240,720));
+        DOfFishery dOfFishery=new DOfFishery();
+        WatsappObserver watsappObserver=new WatsappObserver("8920008996");
+        DiscordObserver discordObserver=new DiscordObserver("HardikBisht@disco");
+        dOfFishery.subscribe(watsappObserver);
+        dOfFishery.subscribe(discordObserver);
+        dOfFishery.sendWarning("Goa");
+        IteratorTester iteratorTester=new IteratorTester();
+        iteratorTester.check();
+        char[] ch=new char[5];
+        ch[1]= '1';
+        for(char i:ch){
+            System.out.println(i);
+
+        }
+
+
+//        CommandTester commandTester=new CommandTester();
+//        commandTester.check();
+        TemplateTester templateTester=new TemplateTester();
+        templateTester.tester(80);
+
+
+
+
+    }
+}
