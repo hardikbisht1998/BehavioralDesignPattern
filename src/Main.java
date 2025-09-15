@@ -1,5 +1,5 @@
-import commandPattern.CommandTester;
 import iteratorPattern.IteratorTester;
+import memento2Pattern.MomentoTester;
 import observerPattern.DOfFishery;
 import observerPattern.DiscordObserver;
 import observerPattern.WatsappObserver;
@@ -7,8 +7,6 @@ import strategy.BusCost;
 import strategy.PlaneCost;
 import strategy.TravelCalculator;
 import templatePattern.TemplateTester;
-
-import javax.swing.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -39,6 +37,8 @@ public class Main {
 //        commandTester.check();
         TemplateTester templateTester=new TemplateTester();
         templateTester.tester(80);
+        memento2Pattern.MomentoTester momentoTester=new MomentoTester();
+        momentoTester.check();
 
 
 
