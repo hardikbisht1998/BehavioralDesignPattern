@@ -1,3 +1,4 @@
+import chainOfResponsibility.CorTester;
 import iteratorPattern.IteratorTester;
 import memento2Pattern.MomentoTester;
 import observerPattern.DOfFishery;
@@ -7,6 +8,7 @@ import strategy.BusCost;
 import strategy.PlaneCost;
 import strategy.TravelCalculator;
 import templatePattern.TemplateTester;
+import visitor.VisitorTester;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -35,10 +37,18 @@ public class Main {
 
 //        CommandTester commandTester=new CommandTester();
 //        commandTester.check();
-        TemplateTester templateTester=new TemplateTester();
-        templateTester.tester(80);
-        memento2Pattern.MomentoTester momentoTester=new MomentoTester();
-        momentoTester.check();
+//        TemplateTester templateTester=new TemplateTester();
+//        templateTester.tester(80);
+//        memento2Pattern.MomentoTester momentoTester=new MomentoTester();
+//        momentoTester.check();
+
+        CorTester corTester=new CorTester();
+        corTester.check();
+
+        VisitorTester visitorTester=new VisitorTester();
+        visitorTester.check();
+
+
 
 
 
