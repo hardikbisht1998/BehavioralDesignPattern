@@ -1,13 +1,13 @@
 import chainOfResponsibility.CorTester;
 import iteratorPattern.IteratorTester;
-import memento2Pattern.MomentoTester;
+
 import observerPattern.DOfFishery;
 import observerPattern.DiscordObserver;
 import observerPattern.WatsappObserver;
+import statePattern.StateTester;
 import strategy.BusCost;
 import strategy.PlaneCost;
 import strategy.TravelCalculator;
-import templatePattern.TemplateTester;
 import visitor.VisitorTester;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -47,6 +47,8 @@ public class Main {
 
         VisitorTester visitorTester=new VisitorTester();
         visitorTester.check();
+        StateTester stateTester=new StateTester();
+        stateTester.check();
 
 
 

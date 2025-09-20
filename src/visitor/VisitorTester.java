@@ -1,6 +1,5 @@
 package visitor;
 
-import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
 import java.util.List;
 
