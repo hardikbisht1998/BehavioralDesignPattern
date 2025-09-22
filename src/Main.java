@@ -1,4 +1,5 @@
 import chainOfResponsibility.CorTester;
+import commandPattern2.CommandPatternTester;
 import iteratorPattern.IteratorTester;
 
 import mediatorPattern.Bidder;
@@ -54,6 +55,9 @@ public class Main {
 
         MediatorTest mediatorTest=new MediatorTest();
         mediatorTest.check();
+
+        CommandPatternTester commandPatternTester=new CommandPatternTester();
+        commandPatternTester.check();
 
 
 
