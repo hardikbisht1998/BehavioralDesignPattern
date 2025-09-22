@@ -2,12 +2,16 @@ package observerPattern;
 
 public class DiscordObserver implements Observer{
 
-    public String discordName;
-    public DiscordObserver(String discordName){
-        this.discordName=discordName;
+    private final String username;
+
+    public DiscordObserver(String username) {
+        this.username = username;
     }
+
+
     @Override
-    public void notified(String place) {
-          System.out.println(discordName+" user Chances of high tide at "+place);
+    public void onAlert(HighTideAlert alert) {
+        System.out.printf("Discord (%s): High tide %.0f%% at %s [%s]%n",
+                username, alert.getProbability() * 100, alert.getLocation(), alert.getTimestamp());
     }
 }

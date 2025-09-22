@@ -1,10 +1,12 @@
 import chainOfResponsibility.CorTester;
+import commandPattern2.CommandPatternTester;
 import iteratorPattern.IteratorTester;
 
 import mediatorPattern.Bidder;
 import mediatorPattern.MediatorTest;
 import observerPattern.DOfFishery;
 import observerPattern.DiscordObserver;
+import observerPattern.ObserverTester;
 import observerPattern.WatsappObserver;
 import statePattern.StateTester;
 import strategy.BusCost;
@@ -52,8 +54,13 @@ public class Main {
 //        StateTester stateTester=new StateTester();
 //        stateTester.check();
 
-        MediatorTest mediatorTest=new MediatorTest();
-        mediatorTest.check();
+//        MediatorTest mediatorTest=new MediatorTest();
+//        mediatorTest.check();
+
+//        CommandPatternTester commandPatternTester=new CommandPatternTester();
+//        commandPatternTester.check();
+        ObserverTester observerTester=new ObserverTester();
+        observerTester.check();
 
 
 

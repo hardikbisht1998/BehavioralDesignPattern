@@ -2,5 +2,5 @@ package observerPattern;
 
 public interface Observer {
 
-    void notified(String place);
+    void onAlert(HighTideAlert alert);
 }

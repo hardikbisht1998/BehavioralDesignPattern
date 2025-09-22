@@ -1,26 +1,31 @@
 package observerPattern;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class DOfFishery implements HighTideWarningSystem {
-    List<Observer> subscriber=new ArrayList<>();
+    private final CopyOnWriteArrayList<Observer> subscribers = new CopyOnWriteArrayList<>();
 
 
     @Override
     public void subscribe(Observer observer) {
-        subscriber.add(observer);
+        if (observer != null) {
+            subscribers.addIfAbsent(observer);
+        }
     }
 
     @Override
     public void unsubscribe(Observer observer) {
-         subscriber.remove(observer);
+        subscribers.remove(observer);
     }
 
     @Override
-    public void sendWarning(String place) {
-        for(Observer observer:subscriber){
-            observer.notified(place);
+    public void send(HighTideAlert alert) {
+        for (Observer o : subscribers) {
+            try {
+                o.onAlert(alert);
+            } catch (Exception ex) {
+                System.err.println("Observer failed: " + o + " reason: " + ex.getMessage());
+            }
         }
 
     }
