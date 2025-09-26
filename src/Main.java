@@ -62,6 +62,9 @@ public class Main {
         ObserverTester observerTester=new ObserverTester();
         observerTester.check();
 
+        CommandPatternTester commandPatternTester=new CommandPatternTester();
+        commandPatternTester.check();
+
 
 
 
