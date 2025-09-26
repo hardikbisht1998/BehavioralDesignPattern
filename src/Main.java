@@ -29,8 +29,8 @@ public class Main {
 //        dOfFishery.subscribe(watsappObserver);
 //        dOfFishery.subscribe(discordObserver);
 //        dOfFishery.sendWarning("Goa");
-//        IteratorTester iteratorTester=new IteratorTester();
-//        iteratorTester.check();
+        IteratorTester iteratorTester=new IteratorTester();
+        iteratorTester.check();
 //        char[] ch=new char[5];
 //        ch[1]= '1';
 //        for(char i:ch){
@@ -59,11 +59,11 @@ public class Main {
 
 //        CommandPatternTester commandPatternTester=new CommandPatternTester();
 //        commandPatternTester.check();
-        ObserverTester observerTester=new ObserverTester();
-        observerTester.check();
-
-        CommandPatternTester commandPatternTester=new CommandPatternTester();
-        commandPatternTester.check();
+//        ObserverTester observerTester=new ObserverTester();
+//        observerTester.check();
+//
+//        CommandPatternTester commandPatternTester=new CommandPatternTester();
+//        commandPatternTester.check();
 
 
 

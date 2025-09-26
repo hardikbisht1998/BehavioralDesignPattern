@@ -5,21 +5,15 @@ import java.util.List;
 
 public class PolicySender {
 
-    List<Employee> employeeList=new ArrayList<>();
+    private final List<Employee> employeeList = new ArrayList<>();
 
-    public void addEmployee(Employee employee){
-        employeeList.add(employee);
-    }
+    public void addEmployee(Employee employee) { employeeList.add(employee); }
 
-    public Employee getEmployee(int index){
-        return employeeList.get(index);
-    }
-
-    public MyIterator getSeniorEmployeeFirstIterator(){
+    public MyIterator<Employee> getSeniorEmployeeFirstIterator() {
         return new SeniorEmployeeFirstIterator(employeeList);
     }
 
-    public MyIterator getJuniorEmployeeFirstIterator(){
+    public MyIterator<Employee> getJuniorEmployeeFirstIterator() {
         return new JuniorEmployeeFirstIterator(employeeList);
     }
 

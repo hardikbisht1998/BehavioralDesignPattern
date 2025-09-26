@@ -1,7 +1,8 @@
 package iteratorPattern;
 
-public interface MyIterator {
+
+interface MyIterator<T> {
     boolean hasNext();
-    Employee getNext();
+    T getNext();
     void reset();
 }

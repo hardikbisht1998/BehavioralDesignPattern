@@ -1,41 +1,29 @@
 package iteratorPattern;
 
-import java.util.Date;
 
-public class Employee {
-    public int employeeId;
-    public String name;
-    public Date dateOfJoining;
-    public int jobLevel;
-    public int salary;
+import java.time.LocalDate;
+import java.util.Objects;
 
-    public String getName() {
-        return name;
-    }
+public final class Employee {
+    private final int employeeId;
+    private final String name;
+    private final LocalDate dateOfJoining;
+    private final int jobLevel;
+    private final int salary; // consider long for bigger ranges
 
-    public int getJobLevel() {
-        return jobLevel;
-    }
-
-    public Date getDateOfJoining() {
-        return dateOfJoining;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public int getEmployeeId() {
-        return employeeId;
-    }
-
-    public Employee(int employeeId, String name, Date dateOfJoining, int jobLevel, int salary) {
+    public Employee(int employeeId, String name, LocalDate dateOfJoining, int jobLevel, int salary) {
         this.employeeId = employeeId;
-        this.name = name;
-        this.dateOfJoining = dateOfJoining;
+        this.name = Objects.requireNonNull(name);
+        this.dateOfJoining = Objects.requireNonNull(dateOfJoining);
         this.jobLevel = jobLevel;
         this.salary = salary;
     }
+
+    public int getEmployeeId() { return employeeId; }
+    public String getName() { return name; }
+    public LocalDate getDateOfJoining() { return dateOfJoining; }
+    public int getJobLevel() { return jobLevel; }
+    public int getSalary() { return salary; }
 
     @Override
     public String toString() {
